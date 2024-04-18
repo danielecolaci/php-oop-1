@@ -1,26 +1,23 @@
 <?php
 
-class Production{
-    public $title;
-    public $language;
-    public $rating;
-
-    public function __construct($title, $language, $rating){
-        $this->title = $title;
-        $this->language = $language;
-        $this->rating = $rating;
-    }
-
-}
-
-$production1 = new Production("Avatar", "English", 8);
-$production2 = new Production("C'è ancora Domani", "Italian", 7);
-
-var_dump($production1);
-var_dump($production2);
-
-echo '<div><h2>' . $production1->title . '</h2><p>' . $production1->language . '</p><h4>' . $production1->rating . '</h4></div>';
-echo '<div><h2>' . $production2->title . '</h2><p>' . $production2->language . '</p><h4>' . $production2->rating . '</h4></div>';
-
+require_once "db.php";
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>php oop 1</title>
+</head>
+<body>
+    <?php foreach($productions as $production): ?>
+    <div>
+        <h2><?php echo $production->title ?></h2>
+        <p><?php echo $production->language ?></p>
+        <h4><?php echo $production->rating ?></h4>
+    </div>
+    <?php endforeach; ?>
+</body>
+</html>
