@@ -12,11 +12,9 @@ $genres = [
 ];
 
 $productions = [
-    new Movie("Avatar", "English", 8, $genres[0], 531.7, 2.42),
-    new Movie("C'è ancora Domani", "Italian", 7, $genres[1], 36.6, 1.58),
+    new Movie("Avatar", "English", 8, $genres[0], 531.7, 162),
+    new Movie("C'è ancora Domani", "Italian", 7, $genres[1], 36.6, 118),
     new TvSerie("Lost", "English", 9, $genres[0], 6)
 ];
-
-var_dump($productions);
 
 ?>
