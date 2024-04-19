@@ -17,6 +17,7 @@ require_once "db.php";
         <h2><?php echo $production->title ?></h2>
         <p><?php echo $production->language ?></p>
         <h4><?php echo $production->rating ?></h4>
+        <h5><?php echo $production->genre->name ?></h5>
     </div>
     <?php endforeach; ?>
 </body>
